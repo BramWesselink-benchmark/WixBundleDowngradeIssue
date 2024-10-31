@@ -1,0 +1,12 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+    <Package Name="DowngradeIssue"
+             Version="$(var.VERSION)"
+             Manufacturer="Example Corporation"
+             UpgradeCode="d205be04-9b07-464b-9bb7-b848ce2d2cda">
+	<Component>
+	    <File Source="testfile.txt" />
+	</Component>
+
+	<ui:WixUI Id="WixUI_InstallDir" InstallDirectory="INSTALLFOLDER"/>
+    </Package>
+</Wix>

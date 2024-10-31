@@ -1,0 +1,15 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:bal="http://wixtoolset.org/schemas/v4/wxs/bal">
+   <Bundle Name="DowngradeIssueBundle"
+           Manufacturer="Example Corporation"
+           Version="$(var.VERSION)"
+           UpgradeCode="34414d59-04b7-48b7-aba1-e73f7dc0f6d3">
+
+      <BootstrapperApplication>
+         <bal:WixInternalUIBootstrapperApplication Theme="standard"/>
+      </BootstrapperApplication>
+      
+      <Chain>
+         <MsiPackage SourceFile="MainMSI-$(var.VERSION)-win64.msi" Visible="no"/>
+      </Chain>
+   </Bundle>
+</Wix>
